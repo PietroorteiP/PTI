@@ -1,27 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Underdog&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .site {
-
     display: flex;
     flex-direction: column;
     font-family: "Ubuntu", Arial, Helvetica, sans-serif;
 }
 
+/* CABEÇALHO */
+
 .container {
     width: 1310px;
     height: 100%;
     margin: 0 auto;
-
-    /* border: solid #000 1px ; */
+    /* border: solid rgb(0, 0, 0) 1px; */
 }
 
 .cabecalho {
@@ -43,8 +41,8 @@
 }
 
 .menu-cabecalho ul {
-    list-style: none;
     display: flex;
+    list-style: none;
     flex-direction: row;
     gap: 10px;
 }
@@ -58,16 +56,16 @@
     width: 30px;
     height: 30px;
     font-size: 12px;
-    color: #fff;
+    color: white;
 
     background-color: #9b9b9b;
     padding: 5px;
     border-radius: 50%;
 
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
-.menu-cabecalho a{
+.menu-cabecalho a {
     text-decoration: none;
 }
 
@@ -81,165 +79,411 @@
 .menu {
     height: 55px;
     background-color: transparent;
-    background-image: linear-gradient(180deg, #fff 0%, #e4e4e4 100%);
+    background-image: linear-gradient(180deg, #fff 0%, #dbdbdb 100%);
 }
 
-    .menu ul {
-        height: 100%;
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+.menu ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .menu a {
     text-decoration: none;
     color: #003c6a;
     padding: 18px;
     font-weight: 500;
+
+    transition: all 0.3s;
 }
 
 .menu a:hover {
-    background-color: #fff;
+    background-color: white;
 }
 
-/* BANNNER */
+/* Banner */
 
 .banner {
     display: flex;
-    width: 100%;
-    overflow: hidden;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* NOTICIAS E COMPETENCIAS */
+/* Noticias e Competencias */
 
 .noticias-competencias {
-    background-image: linear-gradient(180deg, #00315e 0%, #000825 100%);
+    background-image: linear-gradient(180deg, #00315e, #000825 18%);
 }
 
-    .noticias-competencias .titulo {
-        color: #fff;
-        padding-top: 120px;
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
+.noticias-competencias .titulo {
+    color: white;
+    font-size: 30px;
+    padding-top: 120px;
+    margin-bottom: 10px;
+}
 
 .noticias {
     display: flex;
     gap: 20px;
 }
 
-    .noticias .noticia {
-        flex: 1 1 25%;
-        background-color: #fff;
-        
-        border-radius: 20px;
-        overflow: hidden;
+.noticias .noticia {
+    flex: 1 1 25%;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+}
 
-    }
+.noticia .imagem {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
-    .noticia .imagem {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+.noticia .imagem img {
+    width: 100%;
+    height: 210px;
+    border: 1px #006496 solid;
+    transition: all 0.5s ease;
+}
 
+.noticia .imagem:hover img {
+    scale: 1.15;
+}
 
-        .noticia .imagem img {
-            width: 100%;
-            transition: all 0.5s ease;
-        }
+.noticia .data {
+    width: 100%;
+    background-color: #00315EBD;
+    color: #00aaff;
+    padding: 8px 0;
+    font-style: italic;
+    text-align: center;
 
-        .noticia .imagem:hover img {
-            scale: 1.15;
-        } 
+    position: absolute;
+    z-index: 1;
 
-        .noticia .data {
-            width: 100%;
-            background-color: #00315EBD;
-            color: #50C4FF;
-            padding: 8px 0;
-            font-style: italic;
-            text-align: center;
+    bottom: 0;
+    transition: all 0.5s ease;
+}
 
-            position: absolute;
-            z-index: 1;
+.noticia .imagem:hover .data {
+    bottom: -35px;
+}
 
-            bottom: 0;
-            transition: all 0.5s ease;
-        }
+.noticia .post p {
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 22px;
+    padding: 20px;
+    color: #003c6a;
+}
 
-        .noticia .imagem:hover .data {
-            bottom: -35px;
-        }
+.noticia .botao {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.noticia .botao a {
+    text-decoration: none;
+    font-style: italic;
+    background-color: #ebebebeb;
+    color: #0082c4;
+    padding: 4px 15px;
+    border-radius: 25px;
+
+    transition: all 0.5;
+}
+
+.noticia .botao a:hover {
+    background-color: #0082c4;
+    color: #ebebebeb;
+}
+
+.noticias-competencias .maisinfos{
+    margin-top: 20px;
+    justify-self: end;
+}
+
+.noticias-competencias .maisinfos a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.competencias .competencia {
+    flex: 0 1 32%;
+}
+
+.competencias .competencia {
+    border-radius: 10px;
+    border: solid 1px rgb(27, 102, 102);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.competencias .competencia img {
+    width: 100%;
+    scale: 1.10;
+    transition: all 1s ease;
+}
+
+.competencias .competencia:hover img {
+    scale: 1.25;
+}
+
+.competencias .competencia h2 {
+    width: 80%;     
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 25px;
+    left: 10%;
+}
+
+/* Oportunidades */
+
+.oportunidades .titulo {
+    color: #003c6a;
+    font-size: 30px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+.oportunidades .caixas {
+    height: 390px;
+    width: 310px;
+    border-radius: 5%;
+    float: left;
+    margin-bottom: 150px;
+}
+
+.oportunidades .caixas h2 {
+    color: white;
+    font-size: 30px;
+    padding: 30px 0px 20px 20px;
+}
+
+.oportunidades .y{
+    background-color: #fab518;
+    margin-right: 20px;
+}
+
+.oportunidades .g{
+    background-color: #009339;
+    margin-right: 20px;
+}
+
+.oportunidades .b{
+    background-color: #0082c4;
+    margin-right: 20px;
+}
+
+.oportunidades .r{
+    background-color: #e40f1c;
+}
+
+.oportunidades .caixas .opcao {
+    scale: 1;
+    transition: all 0.5s ease;
+}
+
+.oportunidades .caixas .opcao h3{
+    width: 270px;
+    height: 55px;
+    border-radius: 40px;
+    padding-left: 65px;
+    margin: 0px 20px 10px 20px;
+    background-color: white;
+    text-decoration: none;
+    font-weight: 400;
+    align-content: center;
+}
+
+.oportunidades .caixas .opcao a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.oportunidades .caixas .opcao img{
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.oportunidades .caixas .opcao:hover {
+    scale: 1.10;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    height: 53vh;
+    width: 100%;
+    padding: 80px 280px 30px 280px;
+    background-image: linear-gradient(180deg, #00315e, #000825 100%);
+}
+
+.rodape .informacoes {
+    float: left;
+}
+
+.rodape .logo {
+    width: 150px;
+}
+
+.rodape .links ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.rodape .links i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #00315e;
+    border: 1px #0082c4 solid;
+
+    background-color: #0082c4;
+    padding: 5px;
+    border-radius: 50%;
+
+    scale: 1;
+    transition: all 0.3s;
+}
+
+.rodape .links a {
+    text-decoration: none;
+}
+
+.rodape .links li:hover i {
+    scale: 1.05;
+    background-color: transparent;
+    color: #0082c4;
+}
+
+.rodape h4 {
+    margin-top: 15px;
+    color: white;
+}
+
+.rodape .informacoes .dados li {
+    color: white;
+    list-style: none;
+}
+
+.rodape .newsletter {
+    display: flex;
     
-    .noticia .post {
-        padding: 20px;
-    }
+    width: 375px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 40px;
+    
+    background-color: #0082c4;
+    text-decoration: none;
+    color: white;
+    border: 1px #29a8e7 solid;
 
-        .noticia .post p {
-            font-size: 17px;
-            font-weight: 200;
-            line-height: 22px;
-            color: #003c6a;
-        }
+    transition: all 0.3s;
+}
 
-    .noticia .botao {
-        padding: 20px;
-        display: flex;
-        justify-content: end;
-    }
+.rodape .newsletter:hover {
+    background-color: transparent;
+    color: #0082c4;
+    border: 1px #0082c4 solid;
+}
 
-        .noticia .botao a{
-            text-decoration: none;
-            font-style: italic;
-            background-color: #ebebeb;
-            color: #0082c4;
-            padding: 4px 15px;
-            border-radius: 25px;
-        }
+.rodape .servicos {
+    display: inline-block;
+}
 
-         .noticia .botao a:hover {
-            background-color: #0082c4;
-            color: #ebebeb;
-        }
+.rodape .servicos ul {
+    margin-top: 40px;
+    margin-left: 200px;
+    color: white;
+    list-style: none;
+}
 
-    /* COMPETENCIAS */
+.rodape .servicos li{
+    line-height: 23px;
+    font-weight: 100;
+    display: flex;
+    justify-content: end;
+}
 
-    .competencias {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
+.rodape .servicos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 23px;
+    font-weight: 100;
+}
 
-    .competencias .competencia {
-        flex: 0 1 32%;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        border-radius: 10px;
-        border: solid 1px #00315e ;
-    }
+.rodape .servicos li .voltar {
+    padding: 6px 15px;
+    border-radius: 40px;
+    font-size: 13px;
+    background-color: #0082c4;
+    text-decoration: none;
+    color: white;
+    border: 1px #29a8e7 solid;
+    transition: all 0.3s;
+}
 
-    .competencias .competencia  img {
-        width: 100%;
-        transition: all 0.5s ease;
-        scale: 1.05;
-    }
+.rodape .servicos li .voltar:hover {
+    background-color: transparent;
+    color: #0082c4;
+    border: 1px #0082c4 solid;
+}
 
-     .competencias .competencia  img:hover {
-       scale: 1.15;
-    }
+.rodape p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    margin-top: 50px;
+    color: #0082c4;
+    font-size: 12px;
+}
 
-    .competencias .competencia h2 {
-        width: 80%;
-        color: white;
-        text-align: center;
-        font-size: 20px;
-        position: absolute;
-        z-index: 1;
-        bottom: 25px;
-        left: 10%;
-    }
+/* BOTÃO FIXO */
+
+.fixado {
+    background-color: #0056a7;
+    display: flex;
+    cursor: pointer;
+
+    width: 45px;
+    height: 45px;
+    left: 15px;
+    bottom: 15px;
+    padding: 7.5px;
+    border-radius: 40px;
+
+    z-index: 1;
+    position: fixed;
+}
